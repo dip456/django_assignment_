@@ -1,0 +1,13 @@
+{% extends "productApp/base.html" %}
+
+{% block title %}Add Product Sub Category{% endblock %}
+
+{% block content %}
+<h2>Add Product Sub Category</h2>
+<form method="post" enctype="multipart/form-data" action="{% url 'admin_add_product_sub_category' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Add Product Sub Category</button>
+</form>
+<a href="{% url 'admin_product_list' %}" class="btn btn-secondary mt-2">Back to Product List</a>
+{% endblock %}

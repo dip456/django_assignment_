@@ -1,7 +1,6 @@
 """What is Django URLs?make program to create django urls"""
 """
-Django URLs : In Django, URLs refer to Uniform Resource Locators, which are used to specify the web 
-addresses or paths within a web application. These URLs are mapped to corresponding view functions, 
+Django URLs : used to specify the web addresses or paths within a web application. These URLs are mapped to corresponding view functions, 
 allowing Django to determine how to handle incoming requests. 
 
 

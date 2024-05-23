@@ -1,11 +1,11 @@
 """Why Django should be used for web-development? Explain how you can create a project in Django?"""
 
 """
-Django is scalable, making it suitable for projects of any size. Its modular structure allows developers
-to add or remove components as needed, and it's designed to handle high traffic loads.Django takes security
-seriously and provides built-in protection against common security threats such as SQL injection, cross-site 
-scripting, cross-site request forgery (CSRF), and clickjacking.
-
+1. Django is a high-level Python framework.
+2. Django provide secure and maintainable websites.
+3. Django can handle large amounts of traffic and data.
+4. Django provides built-in security feature
+5. Django have a many built-in libraries and tools
 
 Creating a project in Django steps:
 
