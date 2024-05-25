@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product Subcategory</title>
+</head>
+<body>
+    <h2>Add Product Subcategory</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'product_subcat_list' %}">Back to Subcategory List</a>
+</body>
+</html>

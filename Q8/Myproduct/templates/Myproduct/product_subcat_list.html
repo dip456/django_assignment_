@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Subcategory List</title>
+</head>
+<body>
+    <h1>Product Subcategory List</h1>
+    <form method="GET">
+        <input type="text" name="q" placeholder="Search for products">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Subcategory List Table -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Model</th>
+                <th>RAM</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        {% if query %}
+        <p>Search results for: <strong>{{ query }}</strong></p>
+        {% endif %}
+        <tbody>
+            {% for subcat in subcats %}
+                <tr>
+                    <td>{{ subcat.product.product_name }}</td>
+                    <td>{{ subcat.price }}</td>
+                    <td><img src="{{ subcat.image.url }}" alt="{{ subcat.model }}" width="50"></td>
+                    <td>{{ subcat.model }}</td>
+                    <td>{{ subcat.ram }}</td>
+                    <td>
+                        <a href="{% url 'edit_product_sub_category' subcat.pk %}">Edit</a> 
+                        <a href="{% url 'delete_category' subcat.pk %}">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <!-- Link to Add a New Product Subcategory -->
+    <a href="{% url 'add_product_subcat' %}">Add New Subcategory</a>
+
+</body>
+</html>
